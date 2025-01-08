@@ -1,0 +1,7 @@
+Roots of Defense
+- různí nepřítelé
+- různé rostliny (jinak vypadající s různými útoky)
+- 3 levely (závislý na tom kolik je přístupných cest) 
+
+- příběh
+- nepřátelé mohou mít random doplňky (hrnec na hlavě přidává životy)

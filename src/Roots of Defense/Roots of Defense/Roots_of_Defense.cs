@@ -4,12 +4,12 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Roots_of_Defense
 {
-    public class Game1 : Game
+    public class Roots_of_Defense : Game
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
-        public Game1()
+        public Roots_of_Defense()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
