@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roots of Defense", "Roots of Defense\Roots of Defense.csproj", "{D69A716D-B4EE-4A93-9E54-F0E952CB60DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D69A716D-B4EE-4A93-9E54-F0E952CB60DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D69A716D-B4EE-4A93-9E54-F0E952CB60DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D69A716D-B4EE-4A93-9E54-F0E952CB60DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D69A716D-B4EE-4A93-9E54-F0E952CB60DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {72CD82E4-E312-41FF-A7DF-23AE62ADEEAC}
+	EndGlobalSection
+EndGlobal
