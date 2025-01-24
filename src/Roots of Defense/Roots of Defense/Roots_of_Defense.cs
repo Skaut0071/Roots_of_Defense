@@ -61,10 +61,10 @@ namespace Roots_of_Defense
             switch (CurrentState)
             {
                 case GameState.Menu:
-                    _menu.Update(this);
+                    _menu.Update(gameTime);
                     break;
                 case GameState.Game:
-                    _hra.Update(this);
+                    _hra.Update(gameTime);
                     break;
                 case GameState.Exit:
                     Exit();
@@ -82,10 +82,10 @@ namespace Roots_of_Defense
             switch (CurrentState)
             {
                 case GameState.Menu:
-                    _menu.Draw(_spriteBatch, _font);
+                    _menu.Draw(_spriteBatch, GraphicsDevice);
                     break;
                 case GameState.Game:
-                    _hra.Draw(_spriteBatch);
+                    _hra.Draw(_spriteBatch, GraphicsDevice);
                     break;
             }
             _spriteBatch.End();
