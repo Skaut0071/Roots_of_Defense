@@ -6,6 +6,24 @@ namespace Roots_of_Defense
 {
     public class Roots_of_Defense : Game
     {
+        public enum GameState
+        {
+            Menu,
+            Game,
+            Settings,
+            Story,
+            Exit
+        }
+
+        private Menu _menu;
+        private Session _hra;
+        private Story _story;
+        private Settings _settings;
+
+        private SpriteFont _font;
+
+        public GameState CurrentState { get; set; } = GameState.Menu;
+
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
@@ -26,16 +44,32 @@ namespace Roots_of_Defense
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-
-            // TODO: use this.Content to load your game content here
+            _font = Content.Load<SpriteFont>("Font");
+            _menu = new Menu();
+            _hra = new Session();
+            _story = new Story();
+            _settings = new Settings();
         }
 
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
+            if (Keyboard.GetState().IsKeyDown(Keys.Escape))
+                Exit();
 
-            // TODO: Add your update logic here
+            switch (CurrentState)
+            {
+                case GameState.Menu:
+                    _menu.Update(this);
+                    break;
+                case GameState.Game:
+                    _hra.Update(this);
+                    break;
+                case GameState.Exit:
+                    Exit();
+                    break;
+            }
 
             base.Update(gameTime);
         }
@@ -44,7 +78,19 @@ namespace Roots_of_Defense
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
+            _spriteBatch.Begin();
+            switch (CurrentState)
+            {
+                case GameState.Menu:
+                    _menu.Draw(_spriteBatch, _font);
+                    break;
+                case GameState.Game:
+                    _hra.Draw(_spriteBatch);
+                    break;
+            }
+            _spriteBatch.End();
+
+            base.Draw(gameTime);
 
             base.Draw(gameTime);
         }
